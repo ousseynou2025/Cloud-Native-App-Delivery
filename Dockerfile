@@ -10,7 +10,7 @@ WORKDIR /app
 COPY app/package*.json ./
 
 # Install ALL dependencies (including devDependencies for potential build steps)
-RUN npm ci --only=production
+RUN npm install --only=production
 
 # ============================================================
 # Stage 2 — Production image (lean, Alpine-based)
